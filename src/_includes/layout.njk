@@ -5,21 +5,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My website step by step</title>
+    <title>{{ site.title }}</title>
 </head>
 
 <body>
-    <header>
-    <h1>My website step by step</h1>
-</header>
+    {% include 'partials/_header.njk' %}
     <main>
-        
-<h2>My first website</h2>
-<p>This is a small paragraph.</p>
+        {{ content | safe }}
     </main>
-    <footer>
-    <p>&copy; 2023 | My website step by step</p>
-</footer>
+    {% include 'partials/_footer.njk' %}
 </body>
 
 </html>
