@@ -1,14 +1,11 @@
-module.exports = (function(eleventyConfig) {
+module.exports = function (eleventyConfig) {
+  eleventyConfig.addPassthroughCopy("src/assets");
+  eleventyConfig.addShortcode("year", () => `${new Date().getFullYear()}`);
 
-    eleventyConfig.addPassthroughCopy("src/assets");
-
-    return {
-
-        dir: {
-            output: "_site",
-            input: "src"
-        },
-
-    };
-
-});
+  return {
+    dir: {
+      output: "_site",
+      input: "src",
+    },
+  };
+};
